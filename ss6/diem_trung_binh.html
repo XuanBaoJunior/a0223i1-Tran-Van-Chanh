@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="toan" placeholder="nhập toán">
+<input id="ly" placeholder="nhập lý">
+<input id="hoa" placeholder="nhập hoá">
+<button onclick="tinh()">Tính toán</button>
+<p id="ketQua">Kết quả</p>
+<script>
+    // Ctrl + Alt+L : format code cho đẹp
+    // Ctrl +/ : comment code
+    // cách 1: sử dụng toàn bộ lệnh của js thuần
+    //b1: input
+    // let diemToan = +prompt("nhập toán");
+    // let diemHoa = prompt("nhập hoa") * 1;
+    // let diemLy = parseFloat(prompt("nhập lý"));
+    // // b2:
+    // let tong = (diemHoa + diemLy + diemToan);
+    // let diemTrungBinh = tong / 3;
+    // alert("tổng điểm : " + tong + "và trung bình là : " + diemTrungBinh);
+
+    // cách 2: sử dụng cùng mưới một số thẻ html
+    function tinh() {
+        let toan = +document.getElementById("toan").value;
+        let ly = +document.getElementById("ly").value;
+        let hoa = +document.getElementById("hoa").value;
+        let tong = toan + ly + hoa;
+        let trungBinh = tong / 3;
+        document.getElementById("ketQua").innerText = "tổng điểm : " + tong + "và trung bình là : " + trungBinh;
+    }
+</script>
+</body>
+</html>
