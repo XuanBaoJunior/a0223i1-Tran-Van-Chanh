@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 <center>
@@ -14,7 +15,8 @@
                 <label for="name">Name</label>
             </td>
             <td>
-                <input type="text" id="name" name="name">
+                <input oninput="checkName()" type="text" id="name" name="name">
+                <small style="color:red" id="checkName"></small>
             </td>
         </tr>
         <tr>
@@ -78,12 +80,29 @@
             <td>
             </td>
             <td>
-                <button style="margin-left: 50px" type="submit">Send</button>
+                <button onmouseover="mouse()" style="margin-left: 50px" type="submit">Send</button>
                 <button type="reset">Reset</button>
             </td>
         </tr>
     </table>
 </form>
 </center>
+<script>
+    function checkName() {
+        alert("thay đổi");
+         // let nameObj = document.getElementById("name");
+         // nameObj.style.backgroundColor="red";
+         // let name = nameObj.value;
+         // if (name.length<6){
+         //     document.getElementById("checkName").innerText= "Tên chưa đủ độ dài";
+         // }else {
+         //     document.getElementById("checkName").innerHTML= '<i class="fas fa-heart"></i>';
+         //     nameObj.style.backgroundColor="aquamarine";
+         // }
+    }
+    function mouse() {
+        alert("hello")
+    }
+</script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="num">
+<button onclick="layDuLieu()">Send</button>
+<h1 id="ketQua"></h1>
+<!-- cách 1: inline => viết trực tiếp js ở trong thẻ html -->
+<!--( thường viết trong các sự kiên: onclick(), onchange()...-->
+<!--<button onclick="alert('Hello')">Click</button>-->
+<!--Cách 2: sử dụng cặp thẻ <script> code js</script>-->
+<script>
+    // nhập giá trị
+    // cách 1
+    // let n = prompt("nhập một số");
+    // cách 2: sử dụng hộp thoại để xác nhận
+    // let m = confirm("Bạn có muốn xoá không");
+    alert("Bạn đã chọn xoá là : "+ m);
+    // cách 3:
+    function layDuLieu() {
+      let n = document.getElementById("num").value;
+        document.getElementById("ketQua").innerText = "Kết quả vừa nhâp là : "+ n;
+    }
+
+
+   // hiển thị
+   //  Cách 1: dùng alert => hộp thoại
+   //  alert("Số bạn vừa nhập là " + n);
+   //  Cách2: console.log() => hiện thị ở cửa số F12
+   //  console.log("Số bạn vừa nhập là : "+ n);
+   //  Cách 3: sử dụng document.write()
+   //  document.write("số bạn vừa nhập là : "+ n);
+   //  Cách 4: hiển thị trên thẻ html (<h1>)
+   //  document.getElementById("ketQua").innerText = "Kết quả vừa nhâp là : "+ n;
+
+
+</script>
+<!--<script src="my_js.js"></script>-->
+</body>
+</html>
