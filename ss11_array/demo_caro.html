@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+<script>
+    // khai báo mảng 2 chiều
+    let arr = new Array(10);
+    for (let i = 0; i <arr.length ; i++) {
+        arr[i]= new Array(10);
+        for (let j = 0; j <10 ; j++) {
+            arr[i][j]=""
+        }
+    }
+    let player1=true;
+    display();
+
+    // hiển thị bảng
+   function display() {
+       let tableString ='<table border="1">';
+       for (let i = 0; i <arr.length ; i++) {
+           tableString +=' <tr>';
+           for (let j = 0; j <arr[i].length ; j++) {
+               tableString +='<td  onclick="play('+i+','+j+')" style="width: 20px;height: 20px">'+arr[i][j]+'</td>';
+           }
+           tableString +=' </tr>';
+
+       }
+       tableString+='</table>';
+       document.getElementById("display").innerHTML=tableString;
+   }
+
+   // đánh
+   function play(i,j) {
+       if (player1){
+           arr[i][j]="X";
+           player1 =false
+       }else {
+           arr[i][j]="O";
+           player1 =true
+       }
+    display();
+   }
+
+</script>
+</body>
+</html>
