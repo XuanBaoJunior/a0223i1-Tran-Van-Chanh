@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="demo"><button onclick="nhapVao1()"> klm</button>
+<button onclick="nhapVao2()"> klm</button>
+<script>
+    // let starA = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    // let starB = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo'];
+
+    // function nhapVao1(){
+    //     let a =document.getElementById('demo').value;
+    //     let b = starA.indexOf(a);
+    //     if (b== -1){
+    //         alert("khong co du lieu");
+    //     }else {
+    //         alert(starB[b])
+    //     }
+    // }
+    // function nhapVao2(){
+    //     let a =prompt("nhập vào ngôi sao");
+    //     let b = starA.indexOf(a);
+    //     if (b== -1){
+    //         alert("khong co du lieu");
+    //     }else {
+    //         alert(starB[b])
+    //     }
+    // }
+    // function nhapVao1() {
+    //     let a =document.getElementById('demo').value;
+    //     findStar(a);
+    //
+    // }
+    // function nhapVao2() {
+    //     let a =prompt("nhập vào ngôi sao");
+    //     findStar(a);
+    //
+    // }
+    // function findStar(star) {
+    //     let b = starA.indexOf(star);
+    //     if (b== -1){
+    //         alert("khong co du lieu");
+    //     }else {
+    //         alert(starB[b])
+    //     }
+    // }
+
+    // tính bình phương của một số
+    // tính tổng bình phương của các số có trong mảng
+    // tính bình phương của một số
+
+    // let a = prompt("nhập vào 1 số")
+    // let ketQua= tinhBinhPhuong(a);
+    // alert(ketQua)
+    // // tính tổng bình phương của các số có trong mảng
+    //  let tong =0;
+    // let array = [1,2,4];
+    // for (let i = 0; i <array.length ; i++) {
+    //     tong += tinhBinhPhuong(array[i])
+    // }
+    // alert(tong)
+    //
+    // function tinhBinhPhuong(n) {
+    //     return (n*n);
+    //
+    // }
+
+    // function checkString(str) {
+    //     for (let i = 0; i <=str.length/2 ; i++) {
+    //         if (str[i]!=str[str.length-1-i]){
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+    //
+    // alert(checkString('abcbe'))
+
+    function daoMang(arr) {
+        for (let i = 0; i <=arr.length/2 ; i++) {
+           let c = arr[i];
+           arr[i] = arr[arr.length-1-i];
+           arr[arr.length-1-i]=c;
+
+        }
+    }
+    let a =[1,2,3,4,5];
+    alert("trước khi  đảo" + a);
+    daoMang(a);
+    alert("sau khi  đảo" + a);
+
+</script>
+</body>
+</html>
