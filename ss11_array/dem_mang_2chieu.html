@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // cách thứ nhất tạo mảng 2 chiều
+    let array = [
+        [10, 2, 3],
+        [8, 9, 2],
+        [4, 2, 3],
+    ]
+    // cách thứ 2 tạo mảng 2 chiều 3x3 nhưng bên trong không chứa giá trị
+    // let array1 = new Array(3);
+    // for (let i = 0; i <array1.length ; i++) {
+    //     array1[i] = new Array(3)
+    // }
+    // for (let i = 0; i <array.length ; i++) {
+    //     document.write(array[i]);
+    // }
+    // duyệt mảng 2 chiều => sử dụng 2 vòng lặp for
+    let sum1=0;
+    let sum2=0;
+    for (let i = 0; i <array.length ; i++) {
+        for (let j = 0; j <array[i].length ; j++) {
+            // console.log("phần tử thứ "+i +"-"+j + ": "+ array[i][j])
+            // document.writeln(array[i][j]+" ");
+            // tổng đường chéo thứ nhất
+            if (i==j){
+                sum1 += array[i][j];
+            }
+            // tổng đường chéo thứ 2
+            if (i+j==array.length-1){
+                sum2 += array[i][j];
+            }
+        }
+        // document.writeln("<br>");
+    }
+    alert("tổng các pt đường chéo thứ nhất "+ sum1);
+    alert("tổng các pt đường chéo thứ hai "+ sum2);
+</script>
+</body>
+</html>
