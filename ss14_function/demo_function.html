@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // hàm không có tham số
+    // function showHello() {
+    //     alert("Hello")
+    // }
+    // //có tham số
+    // function showMessage(message) {
+    //     alert(message);
+    // }
+    // showHello();
+    // showMessage("xin chào");
+    // showMessage("codegym");
+    // viết hàm tính tổng 2 số a,b
+    function sum1(a,b) {
+      let sum = a+b;
+      return sum;
+    }
+
+    function sum2(a,b) {
+        let sum = a+b;
+       alert("tổng của 2 số là: " +sum);
+    }
+    // gọi hàm/ sử dụng hàm
+    // let x = +prompt("nhập vào số thứ nhất");
+    // let y = +prompt("nhập vào số thứ hai");
+    // let tong = sum1(10,30);
+    // alert("tổng : "+ tong);
+     // sum2(x,y);
+     // sum2(20,30);
+     // sum2(50,100);
+    // tính tổng 4 số
+    let x =10;
+    let y =20;
+    let z =30;
+    let v =40;
+    let tong1 = sum1(x,y);
+    let tong2 = sum1(z,v);
+    let tong = sum1(tong1,tong2)
+    alert("tổng 4 số là: " + tong)
+</script>
+</body>
+</html>

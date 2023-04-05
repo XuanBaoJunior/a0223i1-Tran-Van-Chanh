@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // demo tham trị
+    function change1(num) {
+      num++;
+      console.log("giá trị trong hàm :"+num);
+    }
+    let a = 10;
+    console.log("a trước khi gọi hàm "+ a);
+    change1(a);
+    console.log("a sau khi gọi hàm "+ a);
+    // demo tham chiếu
+    function change2(arr) {
+       arr[0]=100;
+        console.log("mảng trong hàm "+ arr);
+    }
+    let mang =[1,2];
+    console.log("mảng trước khi gọi hàm "+ mang);
+    change2(mang);
+    console.log("mảng sau khi gọi hàm "+ mang);
+
+</script>
+</body>
+</html>
